@@ -1,0 +1,144 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+}
+
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Header */
+.app-header {
+  background: linear-gradient(135deg, #1a365d, #2b6cb0);
+  color: white;
+  padding: 1.5rem 2rem;
+}
+.app-header h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+/* Step indicator */
+.step-indicator { display: flex; gap: 1rem; flex-wrap: wrap; }
+.step {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+.step.active { background: rgba(255,255,255,0.9); color: #1a365d; opacity: 1; font-weight: 600; }
+.step.done { background: rgba(72,187,120,0.8); opacity: 1; }
+.step span { background: rgba(0,0,0,0.2); border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+
+/* Error */
+.error-banner {
+  background: #fed7d7; color: #c53030;
+  padding: 0.75rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.error-banner button { background: none; border: none; cursor: pointer; font-size: 1rem; color: #c53030; }
+
+/* Main */
+main { flex: 1; padding: 2rem; max-width: 800px; margin: 0 auto; width: 100%; }
+
+/* Screen & Card */
+.screen { width: 100%; }
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.card h2 { font-size: 1.4rem; color: #1a365d; margin-bottom: 0.5rem; }
+.subtitle { color: #718096; margin-bottom: 1.5rem; line-height: 1.6; }
+
+/* Disclaimer */
+.disclaimer {
+  background: #ebf8ff; color: #2c5282;
+  border-left: 4px solid #3182ce;
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.disclaimer.final { margin-top: 1.5rem; background: #fff3cd; color: #856404; border-color: #ffc107; }
+
+/* Form */
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #4a5568; }
+textarea, input {
+  width: 100%; border: 2px solid #e2e8f0; border-radius: 8px;
+  padding: 0.75rem; font-size: 1rem; font-family: inherit;
+  transition: border-color 0.2s; resize: vertical; margin-bottom: 1rem;
+}
+textarea:focus, input:focus { outline: none; border-color: #3182ce; }
+
+/* Buttons */
+.btn-primary {
+  background: #2b6cb0; color: white;
+  border: none; border-radius: 8px;
+  padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600;
+  cursor: pointer; width: 100%; transition: background 0.2s;
+}
+.btn-primary:hover:not(:disabled) { background: #1a365d; }
+.btn-primary:disabled { background: #a0aec0; cursor: not-allowed; }
+
+.btn-secondary {
+  background: white; color: #2b6cb0;
+  border: 2px solid #2b6cb0; border-radius: 8px;
+  padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-secondary:hover { background: #ebf8ff; }
+.btn-group { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.btn-group button { flex: 1; }
+
+/* Progress */
+.progress-bar { height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 0.5rem; }
+.progress-fill { height: 100%; background: #48bb78; border-radius: 3px; transition: width 0.4s; }
+.progress-label { text-align: right; font-size: 0.85rem; color: #718096; margin-bottom: 1.5rem; }
+
+/* Question */
+.question-box {
+  background: #f7fafc; border: 2px solid #bee3f8;
+  border-radius: 8px; padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem; font-size: 1.05rem; color: #2c5282;
+}
+
+/* Sections */
+.section { margin-bottom: 1.5rem; }
+.section h3 { font-size: 1rem; color: #4a5568; margin-bottom: 0.75rem; }
+.summary-box {
+  background: #f0fff4; border: 1px solid #9ae6b4;
+  border-radius: 8px; padding: 1rem;
+  max-height: 300px; overflow-y: auto;
+  font-size: 0.9rem; line-height: 1.7;
+}
+.care-box {
+  background: #fffaf0; border: 1px solid #fbd38d;
+  border-radius: 8px; padding: 1rem; font-size: 0.9rem; line-height: 1.8;
+}
+
+/* Report */
+.report-header { margin-bottom: 1.5rem; }
+.session-id { font-size: 0.8rem; color: #718096; }
+.report-body {
+  border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem;
+  background: #fafafa; line-height: 1.8;
+  max-height: 500px; overflow-y: auto;
+}
+.report-body h1, .report-body h2, .report-body h3 { color: #1a365d; margin: 1rem 0 0.5rem; }
+.report-body ul, .report-body ol { margin-left: 1.5rem; }
+
+/* Footer */
+footer {
+  background: #1a365d; color: rgba(255,255,255,0.7);
+  text-align: center; padding: 1rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  main { padding: 1rem; }
+  .card { padding: 1.25rem; }
+  .btn-group { flex-direction: column; }
+}

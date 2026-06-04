@@ -1,0 +1,8 @@
+{
+  "fièvre": "Fièvre : surveillance température toutes les 4h, hydratation++, antipyrétique si >38.5°C",
+  "toux": "Toux : humidification de l'air, boissons chaudes, éviter irritants",
+  "maux de tête": "Céphalées : repos en position allongée, éviter lumière forte, hydratation",
+  "douleur abdominale": "Douleur abdominale : jeûne relatif, consultation si persistance >24h",
+  "dyspnée": "Dyspnée : position demi-assise, appel médecin urgent si sevère",
+  "fatigue": "Fatigue : repos, sommeil régulier, hydratation, surveillance évolution"
+}
